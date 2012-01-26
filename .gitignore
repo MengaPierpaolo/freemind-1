@@ -1,0 +1,7 @@
+bin/
+.djunitplugin
+*.swp
+*.swo
+freemind/lib/bindings.jar
+freemind/version.properties
+freemind/jcoverage.ser
