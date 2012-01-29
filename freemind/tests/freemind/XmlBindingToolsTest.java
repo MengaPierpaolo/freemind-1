@@ -42,4 +42,16 @@ public class XmlBindingToolsTest extends FreeMindTestBase {
 		context.assertIsSatisfied();
 	}
 	
+	public void testDecorateDialog() {
+		tools = XmlBindingTools.getInstance();
+		mockController = context.mock(Controller.class);
+		
+		context.checking(new Expectations() {{
+			one(mockController).getProperty(with(any(String.class)));
+		}});
+		
+		tools.decorateDialog(mockController, new JDialog(), "");
+		context.assertIsSatisfied();
+	}
+	
 }
