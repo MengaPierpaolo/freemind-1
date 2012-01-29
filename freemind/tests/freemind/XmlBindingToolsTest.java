@@ -22,7 +22,7 @@ public class XmlBindingToolsTest extends FreeMindTestBase {
 	private WindowConfigurationStorage mockStorage;
 	private Controller mockController;
 	
-	public void testIt() throws JiBXException {
+	public void testStoreDialogPositions() throws JiBXException {
 		mockStorage = context.mock(WindowConfigurationStorage.class);
 		mockController = context.mock(Controller.class);
 		

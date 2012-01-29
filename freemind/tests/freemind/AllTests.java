@@ -46,6 +46,7 @@ public class AllTests {
 		suite.addTest(new TestSuite(LastStorageManagementTests.class));
 		suite.addTest(new TestSuite(ToolsTests.class));
 		suite.addTest(new TestSuite(ExportTests.class));
+		suite.addTest(new TestSuite(XmlBindingToolsTest.class));
 		// $JUnit-END$
 		return suite;
 	}
