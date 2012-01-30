@@ -23,6 +23,7 @@ package tests.freemind;
 import junit.framework.Test;
 import junit.framework.TestResult;
 import junit.framework.TestSuite;
+import tests.freemind.common.PropertyBeanTest;
 import tests.freemind.findreplace.FindTextTests;
 
 /** */
@@ -47,6 +48,7 @@ public class AllTests {
 		suite.addTest(new TestSuite(ToolsTests.class));
 		suite.addTest(new TestSuite(ExportTests.class));
 		suite.addTest(new TestSuite(XmlBindingToolsTest.class));
+		suite.addTest(new TestSuite(PropertyBeanTest.class));
 		// $JUnit-END$
 		return suite;
 	}
