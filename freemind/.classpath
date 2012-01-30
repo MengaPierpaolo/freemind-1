@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="**/build*.xml|**/build.xml|**/cvs/|plugins/collaboration/jabber/**|windows-launcher/**" kind="src" path=""/>
+	<classpathentry excluding="**/build*.xml|**/build.xml|**/cvs/|lib/|plugins/collaboration/jabber/**|windows-launcher/**" kind="src" path=""/>
 	<classpathentry kind="lib" path="plugins/svg/xml-apis.jar"/>
 	<classpathentry kind="lib" path="plugins/svg/batik-bridge.jar"/>
 	<classpathentry kind="lib" path="plugins/svg/batik-css.jar"/>
@@ -35,15 +35,17 @@
 	<classpathentry kind="lib" path="plugins/collaboration/database/hsqldb.jar" sourcepath="plugins/collaboration/database/hsqldb_1_8_1_3.zip"/>
 	<classpathentry kind="lib" path="plugins/map/JMapViewer.jar" sourcepath="plugins/map/JMapViewer_src.jar"/>
 	<classpathentry kind="lib" path="lib/jortho.jar"/>
-	<classpathentry kind="lib" path="lib/cglib-2.1_3-src.jar"/>
-	<classpathentry kind="lib" path="lib/cglib-nodep-2.1_3.jar"/>
-	<classpathentry kind="lib" path="lib/hamcrest-core-1.1.jar"/>
-	<classpathentry kind="lib" path="lib/hamcrest-library-1.1.jar"/>
-	<classpathentry kind="lib" path="lib/jmock-2.4.0.jar"/>
-	<classpathentry kind="lib" path="lib/jmock-junit3-2.4.0.jar"/>
-	<classpathentry kind="lib" path="lib/jmock-junit4-2.4.0.jar"/>
-	<classpathentry kind="lib" path="lib/jmock-legacy-2.4.0.jar"/>
-	<classpathentry kind="lib" path="lib/objenesis-1.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/jmock-2.5.1/bsh-core-2.0b4.jar"/>
+	<classpathentry kind="lib" path="lib/jmock-2.5.1/clib-2.1_3-src.jar"/>
+	<classpathentry kind="lib" path="lib/jmock-2.5.1/clib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="lib/jmock-2.5.1/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/jmock-2.5.1/hamcrest-library-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/jmock-2.5.1/jmock-2.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/jmock-2.5.1/jmock-junit3-2.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/jmock-2.5.1/jmock-junit4-2.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/jmock-2.5.1/jmock-legacy-2.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/jmock-2.5.1/jmock-script-2.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/jmock-2.5.1/objenesis-1.0.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
