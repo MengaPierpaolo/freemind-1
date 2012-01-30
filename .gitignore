@@ -5,3 +5,4 @@ bin/
 freemind/lib/bindings.jar
 freemind/version.properties
 freemind/jcoverage.ser
+.settings/
