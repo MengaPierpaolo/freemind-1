@@ -51,6 +51,7 @@ public class AllTests {
 		suite.addTest(new TestSuite(XmlBindingToolsTest.class));
 		suite.addTest(new TestSuite(PropertyBeanTest.class));
 		suite.addTest(new TestSuite(ComboPropertyTest.class));
+		suite.addTest(new TestSuite(ResourcesTest.class));
 		// $JUnit-END$
 		return suite;
 	}

@@ -17,8 +17,6 @@ import freemind.controller.Controller;
 import freemind.controller.MenuBar;
 import freemind.main.FreeMindMain;
 import freemind.main.Resources;
-import freemind.main.FreeMindMain.StartupDoneListener;
-import freemind.main.FreeMindMain.VersionInformation;
 import freemind.view.mindmapview.MapView;
 
 public class ResourcesTest extends FreeMindTestBase {
