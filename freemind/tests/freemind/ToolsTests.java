@@ -20,6 +20,7 @@
 
 package tests.freemind;
 
+import java.awt.Color;
 import java.io.Reader;
 import java.io.StringReader;
 import java.net.URL;
@@ -84,6 +85,11 @@ public class ToolsTests extends FreeMindTestBase {
 		result = HtmlTools.unicodeToHTMLUnicodeEntity(result, true);
 		System.out.println(result);
 		assertEquals("Correct conversion", input, result);
+	}
+	
+	public void testColorToXml() {
+		assertNull(Tools.colorToXml(null));
+		assertNotNull(Tools.colorToXml(Color.green));
 	}
 
 }
