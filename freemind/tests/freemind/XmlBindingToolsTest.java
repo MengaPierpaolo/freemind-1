@@ -1,5 +1,7 @@
 package tests.freemind;
 
+import java.lang.reflect.Field;
+
 import javax.swing.JDialog;
 
 import org.jibx.runtime.IMarshallingContext;
@@ -11,6 +13,8 @@ import org.jmock.lib.legacy.ClassImposteriser;
 import freemind.common.XmlBindingTools;
 import freemind.controller.Controller;
 import freemind.controller.actions.generated.instance.WindowConfigurationStorage;
+import freemind.main.FreeMindMain;
+import freemind.main.Resources;
 
 public class XmlBindingToolsTest extends FreeMindTestBase {
 
@@ -43,6 +47,24 @@ public class XmlBindingToolsTest extends FreeMindTestBase {
 	}
 	
 	public void testDecorateDialog() {
+		tools = XmlBindingTools.getInstance();
+		mockController = context.mock(Controller.class);
+		
+		context.checking(new Expectations() {{
+			one(mockController).getProperty(with(any(String.class)));
+		}});
+		
+		tools.decorateDialog(mockController, new JDialog(), "");
+		context.assertIsSatisfied();
+	}
+	
+	public void testWithResourcesOn() throws SecurityException, NoSuchFieldException, IllegalArgumentException, IllegalAccessException {
+		Field main = Resources.getInstance().getClass().getDeclaredField("main");
+		main.setAccessible(true);
+		FreeMindMain privateField = (FreeMindMain) main.get(Resources.getInstance());
+		
+		privateField.setProperty("place_dialogs_on_first_screen", "true");
+		
 		tools = XmlBindingTools.getInstance();
 		mockController = context.mock(Controller.class);
 		
