@@ -26,6 +26,7 @@ import junit.framework.TestSuite;
 import tests.freemind.common.PropertyBeanTest;
 import tests.freemind.findreplace.FindTextTests;
 import freemind.common.ComboPropertyTest;
+import freemind.common.StringPropertyTest;
 
 /** */
 public class AllTests {
@@ -52,6 +53,7 @@ public class AllTests {
 		suite.addTest(new TestSuite(PropertyBeanTest.class));
 		suite.addTest(new TestSuite(ComboPropertyTest.class));
 		suite.addTest(new TestSuite(ResourcesTest.class));
+		suite.addTest(new TestSuite(StringPropertyTest.class));
 		// $JUnit-END$
 		return suite;
 	}
