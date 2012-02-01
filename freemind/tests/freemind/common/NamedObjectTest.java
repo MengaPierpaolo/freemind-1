@@ -1,5 +1,6 @@
-package freemind.common;
+package tests.freemind.common;
 
+import freemind.common.NamedObject;
 import junit.framework.TestCase;
 
 public class NamedObjectTest extends TestCase {
