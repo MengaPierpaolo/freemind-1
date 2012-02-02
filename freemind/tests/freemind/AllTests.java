@@ -23,9 +23,9 @@ package tests.freemind;
 import junit.framework.Test;
 import junit.framework.TestResult;
 import junit.framework.TestSuite;
-import tests.freemind.common.PropertyBeanTest;
+import tests.freemind.common.*;
 import tests.freemind.findreplace.FindTextTests;
-import freemind.common.ComboPropertyTest;
+import freemind.common.*;
 
 /** */
 public class AllTests {
@@ -52,6 +52,13 @@ public class AllTests {
 		suite.addTest(new TestSuite(PropertyBeanTest.class));
 		suite.addTest(new TestSuite(ComboPropertyTest.class));
 		suite.addTest(new TestSuite(ResourcesTest.class));
+		suite.addTest(new TestSuite(StringPropertyTest.class));
+		suite.addTest(new TestSuite(BooleanPropertyTest.class));
+		suite.addTest(new TestSuite(NamedObjectTest.class));
+		suite.addTest(new TestSuite(DontShowNotificationProperty.class));
+		suite.addTest(new TestSuite(SeparatorPropertyTest.class));
+		suite.addTest(new TestSuite(NumberPropertyTest.class));
+		suite.addTest(new TestSuite(ColorPropertyTest.class));
 		// $JUnit-END$
 		return suite;
 	}

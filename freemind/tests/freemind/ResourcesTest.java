@@ -281,4 +281,20 @@ public class ResourcesTest extends FreeMindTestBase {
 		assertNotNull(sut.getCountryMap());
 	}
 	
+	public void testGetProperty() {
+		assertNull(sut.getProperty("not found"));
+	}
+	
+	public void testAssertHasNoPropertiesAtFirst() {
+		assertNull(sut.getProperties());
+	}
+	
+	public void testBoolPropertyNotFound() {
+		assertFalse(sut.getBoolProperty("not found"));
+	}
+	
+	public void testVersionNotNull() {
+		assertNotNull(sut.getFreemindVersion());
+	}
+	
 }
