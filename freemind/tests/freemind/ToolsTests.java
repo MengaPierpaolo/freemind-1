@@ -21,6 +21,7 @@
 package tests.freemind;
 
 import java.awt.Color;
+import java.awt.Point;
 import java.io.Reader;
 import java.io.StringReader;
 import java.net.URL;
@@ -90,6 +91,34 @@ public class ToolsTests extends FreeMindTestBase {
 	public void testColorToXml() {
 		assertNull(Tools.colorToXml(null));
 		assertNotNull(Tools.colorToXml(Color.green));
+		assertNotNull(Tools.colorToXml(Color.BLACK));
 	}
-
+	
+	public void testExecutableByExtension() {
+		assertTrue(Tools.executableByExtension("file.exe"));
+		assertFalse(Tools.executableByExtension("file.no"));
+	}
+	
+	public void testxmlToColor() {
+		assertNull(Tools.xmlToColor(null));
+		assertNotNull(Tools.xmlToColor("#000000"));
+		assertEquals(Color.BLACK, Tools.xmlToColor("#000000"));
+		try {
+			assertNull(Tools.xmlToColor("#1"));
+		} catch (Exception e) { }
+	}
+	
+	public void testPointToXml() {
+		assertNull(Tools.PointToXml(null));
+		assertNotNull(Tools.PointToXml(new Point(0,0)));
+		assertEquals( "0;0;", Tools.PointToXml(new Point(0,0)) );
+		assertEquals( "1;2;", Tools.PointToXml(new Point(1,2)) );
+	}
+	
+	public void testxmlToPoint() {
+		assertNull(Tools.xmlToPoint(null));
+	}
+	
 }
+
+
