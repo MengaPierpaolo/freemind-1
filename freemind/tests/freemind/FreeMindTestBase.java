@@ -50,6 +50,13 @@ public class FreeMindTestBase extends TestCase {
 	public FreeMindMainMock getFrame() {
 		return mFreeMindMain;
 	}
+	
+	/**
+	 * Added a test to remove the warning, it doesn't do anything else.
+	 */
+	public void testRemoveWarning() {
+		assertTrue(true);
+	}
 
 }
 

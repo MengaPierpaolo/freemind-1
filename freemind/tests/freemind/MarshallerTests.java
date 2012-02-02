@@ -47,7 +47,7 @@ public class MarshallerTests extends FreeMindTestBase {
 		assertEquals("Newline is correctly marshalled?" + marshall,
 				testPattern.getName(), testPatternUnmarshalled.getName());
 		/**
-		 * Removed this test becuase it fails, and we are not going to
+		 * Removed this test because it fails, and we are not going to
 		 * fix all of their tests.  Not yet.
 		 */
 		/*
