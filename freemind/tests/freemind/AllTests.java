@@ -57,6 +57,7 @@ public class AllTests {
 		suite.addTest(new TestSuite(NamedObjectTest.class));
 		suite.addTest(new TestSuite(DontShowNotificationProperty.class));
 		suite.addTest(new TestSuite(SeparatorPropertyTest.class));
+		suite.addTest(new TestSuite(NumberPropertyTest.class));
 		// $JUnit-END$
 		return suite;
 	}
