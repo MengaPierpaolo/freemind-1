@@ -721,6 +721,14 @@ public class AttributeRegistryIntegrationTest extends FreeMindTestBase {
 	
 	public void testGettingInitialKeyShouldNotBeNull() {
 		assertNotNull(sut.getKey(0));
-	}	
+	}
+	
+	public void testGetElementShouldNotBeNull() {
+		assertNotNull(sut.getElement(0));
+	}
+	
+	public void testGetRestrictionIsFalseOnFreshProject() {
+		assertFalse(sut.getRestriction(0));
+	}
 	
 }
