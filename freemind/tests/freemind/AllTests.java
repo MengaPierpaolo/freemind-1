@@ -59,6 +59,7 @@ public class AllTests {
 		suite.addTest(new TestSuite(SeparatorPropertyTest.class));
 		suite.addTest(new TestSuite(NumberPropertyTest.class));
 		suite.addTest(new TestSuite(ColorPropertyTest.class));
+		suite.addTest(new TestSuite(AttributeRegistryIntegrationTest.class));
 		// $JUnit-END$
 		return suite;
 	}
