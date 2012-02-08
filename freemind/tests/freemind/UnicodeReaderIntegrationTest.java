@@ -1,5 +1,7 @@
 package tests.freemind;
 
+import java.io.IOException;
+
 import freemind.common.UnicodeReader;
 
 public class UnicodeReaderIntegrationTest extends FreeMindTestBase {
@@ -17,6 +19,15 @@ public class UnicodeReaderIntegrationTest extends FreeMindTestBase {
 	
 	public void testGetEncodingIsNull() {
 		assertNull(sut.getEncoding());
+	}
+	
+	public void testCloseRaisesExceptionForNullStream() {
+		try {
+			sut.close();
+			fail();
+		} catch (IOException e) {
+			assertTrue(true);
+		}
 	}
 	
 }
