@@ -1,5 +1,8 @@
 package tests.freemind;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 
 import freemind.common.UnicodeReader;
@@ -24,6 +27,15 @@ public class UnicodeReaderIntegrationTest extends FreeMindTestBase {
 	public void testCloseRaisesExceptionForNullStream() {
 		try {
 			sut.close();
+			fail();
+		} catch (IOException e) {
+			assertTrue(true);
+		}
+	}
+	
+	public void testReadingCorruptedStream() {
+		try {
+			sut = new UnicodeReader(new FileInputStream(new File("/path/to/broken/file")), "utf-8");
 			fail();
 		} catch (IOException e) {
 			assertTrue(true);
