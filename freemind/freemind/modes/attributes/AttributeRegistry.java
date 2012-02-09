@@ -228,7 +228,7 @@ public class AttributeRegistry {
 		myTableModel.fireRestrictionsUpdated(row);
 	}
 
-	Boolean getRestriction(int row) {
+	public Boolean getRestriction(int row) {
 		if (row == GLOBAL) {
 			return restrictionModel;
 		} else {
