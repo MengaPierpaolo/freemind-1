@@ -117,8 +117,36 @@ public class ToolsTests extends FreeMindTestBase {
 	
 	public void testxmlToPoint() {
 		assertNull(Tools.xmlToPoint(null));
+		
+		assertEquals(new Point(0,0), Tools.xmlToPoint("0;0;"));
+		assertEquals(new Point(1,1), Tools.xmlToPoint( (new Point(1,1)).toString()));
+		
+		boolean flag = false;
+		try {
+			Tools.xmlToPoint("0;0;0");
+		} catch (IllegalArgumentException e) {
+			flag = true;
+		}
+		assertTrue(flag);
+		
 	}
 	
+	public void testBooleantoXML() {
+		assertEquals("true", Tools.BooleanToXml(true));
+		assertEquals("false", Tools.BooleanToXml(false));
+	}
+	
+	public void testXMLToBoolean() {
+		assertTrue(Tools.xmlToBoolean("true"));
+		assertTrue(Tools.xmlToBoolean("True"));
+		assertFalse(Tools.xmlToBoolean("false"));
+		assertFalse(Tools.xmlToBoolean("derp"));
+		assertNull(Tools.xmlToBoolean(null));
+	}
+	
+	public void testExpandFileName() {
+		assertEquals( System.getProperty("user.home") + "/derp.exe", Tools.expandFileName("~/derp.exe"));
+	}
 }
 
 
