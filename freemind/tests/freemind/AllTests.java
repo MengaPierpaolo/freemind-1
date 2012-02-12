@@ -61,6 +61,7 @@ public class AllTests {
 		suite.addTest(new TestSuite(ColorPropertyTest.class));
 		suite.addTest(new TestSuite(AttributeRegistryIntegrationTest.class));
 		suite.addTest(new TestSuite(UnicodeReaderIntegrationTest.class));
+		suite.addTest(new TestSuite(MindIconTest.class));
 		// $JUnit-END$
 		return suite;
 	}
