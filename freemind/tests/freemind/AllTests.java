@@ -49,19 +49,6 @@ public class AllTests {
 		suite.addTest(new TestSuite(ToolsTests.class));
 		suite.addTest(new TestSuite(ExportTests.class));
 		suite.addTest(new TestSuite(XmlBindingToolsTest.class));
-		suite.addTest(new TestSuite(PropertyBeanTest.class));
-		suite.addTest(new TestSuite(ComboPropertyTest.class));
-		suite.addTest(new TestSuite(ResourcesTest.class));
-		suite.addTest(new TestSuite(StringPropertyTest.class));
-		suite.addTest(new TestSuite(BooleanPropertyTest.class));
-		suite.addTest(new TestSuite(NamedObjectTest.class));
-		suite.addTest(new TestSuite(DontShowNotificationProperty.class));
-		suite.addTest(new TestSuite(SeparatorPropertyTest.class));
-		suite.addTest(new TestSuite(NumberPropertyTest.class));
-		suite.addTest(new TestSuite(ColorPropertyTest.class));
-		suite.addTest(new TestSuite(AttributeRegistryIntegrationTest.class));
-		suite.addTest(new TestSuite(UnicodeReaderIntegrationTest.class));
-		suite.addTest(new TestSuite(MindIconTest.class));
 		// $JUnit-END$
 		return suite;
 	}
